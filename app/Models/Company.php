@@ -12,6 +12,6 @@ class Company extends Model
 
     public function bankAccount()
     {
-        return $this->morphOne(BankAccount::class, 'bankable');
+        return $this->morphMany(BankAccount::class, 'bankable');
     }
 }
