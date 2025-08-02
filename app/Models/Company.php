@@ -9,4 +9,9 @@ class Company extends Model
     protected $fillable=[
         'name'
     ];
+
+    public function bankAccount()
+    {
+        return $this->morphOne(BankAccount::class, 'bankable');
+    }
 }

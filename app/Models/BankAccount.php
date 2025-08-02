@@ -11,4 +11,8 @@ class BankAccount extends Model
         'account_number',
         'bank_name',
     ];
+    public function bankable()
+    {
+        return $this->morphTo();
+    }
 }

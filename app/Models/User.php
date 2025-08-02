@@ -23,6 +23,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function bankAccount()
+    {
+        return $this->morphOne(BankAccount::class, 'bankable');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
