@@ -29,6 +29,9 @@ Route::get('/user/{user}/bank-account', function (User $user) {
     ]);
     return $user->with('bankAccount')->get();
 });
+Route::get('/user/{user}/bank-account/get', function (User $user) {
+    return $user->bankAccount;
+});
 
 //COMPANY
 Route::get('/companies', function () {
@@ -48,4 +51,7 @@ Route::get('/company/{company}/bank-account', function (Company $company) {
         'bank_name' => 'Mellat',
     ]);
     return $company->with('bankAccount')->get();
+});
+Route::get('/company/{company}/bank-account/get', function (Company $company) {
+    return $company->bankAccount;
 });
