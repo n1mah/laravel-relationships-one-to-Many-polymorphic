@@ -1,15 +1,12 @@
 <?php
 
+use App\Models\BankAccount;
 use App\Models\Company;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 //USER
-
 Route::get('/users', function () {
     return User::all();
 });
@@ -54,4 +51,9 @@ Route::get('/company/{company}/bank-account', function (Company $company) {
 });
 Route::get('/company/{company}/bank-account/get', function (Company $company) {
     return $company->bankAccount;
+});
+
+//BANKkACCOUNT
+Route::get('/bank-account/{bankAccount}', function (BankAccount $bankAccount) {
+    return $bankAccount;
 });
