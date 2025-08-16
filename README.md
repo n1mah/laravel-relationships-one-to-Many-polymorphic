@@ -72,6 +72,7 @@ php artisan serve
 
 - GET /company/{company}/bank-account/get → Retrieve all bank accounts for a company.
 
+
 ---
 
 
